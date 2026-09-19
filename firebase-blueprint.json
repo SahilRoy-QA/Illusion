@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Firebase Schema Blueprint",
+  "description": "Schema definitions for illusion multi-tenant platform on Firebase Firestore",
+  "entities": {
+    "tenants": {
+      "path": "tenants/{tenantId}",
+      "description": "Tenant configuration and workspace profile",
+      "fields": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "businessType": { "type": "string" },
+        "schemaVersion": { "type": "number" },
+        "profile": { "type": "object" },
+        "branding": { "type": "object" },
+        "entities": { "type": "array" },
+        "website": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "records": {
+      "path": "tenants/{tenantId}/records/{recordId}",
+      "description": "Generic tenant records (patients, appointments, clients, services, etc.)",
+      "fields": {
+        "id": { "type": "string" },
+        "tenantId": { "type": "string" },
+        "entityKey": { "type": "string" },
+        "data": { "type": "object" },
+        "version": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "deletedAt": { "type": "string" }
+      }
+    },
+    "audit": {
+      "path": "tenants/{tenantId}/audit/{auditId}",
+      "description": "Immutable tenant audit logs",
+      "fields": {
+        "id": { "type": "string" },
+        "tenantId": { "type": "string" },
+        "actorId": { "type": "string" },
+        "actorName": { "type": "string" },
+        "action": { "type": "string" },
+        "entityKey": { "type": "string" },
+        "entityId": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    },
+    "bookings": {
+      "path": "tenants/{tenantId}/bookings/{bookingId}",
+      "description": "Public website appointments and booking request queue",
+      "fields": {
+        "id": { "type": "string" },
+        "tenantId": { "type": "string" },
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "service": { "type": "string" },
+        "preferredTime": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# illusion — Development Progress Tracker
+
+## State Snapshot
+- **Platform Name:** illusion
+- **Current Stage:** Stage 14 Complete (Firebase Firestore Cloud Backend, Deployed Security Rules & Port Adapters)
+- **Completed Stages:**
+  - Stage 0: Architecture & Design
+  - Stage 1: Foundation & Semantics
+  - Stage 2: Auth & RBAC
+  - Stage 3: Business Provisioning & Schema Management
+  - Stage 4: Public Website, Booking & Business Profile Management
+  - Stage 5: Dynamic Record Lifecycle, Concurrency & Data Operations
+  - Stage 6: Business Analytics, Dashboard Intelligence & Quota Monitoring
+  - Stage 7: Business Operations, Operating Schedules & Visual Branding
+  - Stage 8: Team Directory, Member Invitations & Access Control
+  - Stage 9: Security Governance, Audit Inspection & Compliance Intelligence
+  - Stage 10: Workspace Resilience, Quota Enforcement & Version Rollback
+  - Stage 11: Workspace Data Portability, Compliance Export & Backup Bundling
+  - Stage 12: Super Admin Fleet Command, Multi-Tenant Governance & Operational Diagnostics
+  - Stage 13: Plain-Language Guarantee (ADR 002) Audit & Auto-Remediation Engine
+  - Stage 14: Firebase Firestore Backend & Cloud Persistence
+- **Schema Version:** 1
+- **Shipped Modules / Templates:**
+  - Clinic (`template-clinic`, Dr. Amit Orthopedic Clinic)
+  - Salon (`template-salon`, Priya's Salon Studio)
+  - Retail Store (`template-retail`, Craft & Clay Goods)
+  - Custom / Blank (`template-blank`)
+- **Adapters:**
+  - Firebase Firestore (Cloud persistence, deployed rules, subcollection scoping)
+  - Local (In-memory & client-side isolated store fallback)
+- **Total Invariants Tested:** 13/13 passing
